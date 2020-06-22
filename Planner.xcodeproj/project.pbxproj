@@ -9,23 +9,39 @@
 /* Begin PBXBuildFile section */
 		D25F4F422499191E0024896F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F4F412499191E0024896F /* AppDelegate.swift */; };
 		D25F4F442499191E0024896F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F4F432499191E0024896F /* SceneDelegate.swift */; };
-		D25F4F462499191E0024896F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F4F452499191E0024896F /* FirstViewController.swift */; };
-		D25F4F482499191E0024896F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F4F472499191E0024896F /* SecondViewController.swift */; };
 		D25F4F4B2499191E0024896F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25F4F492499191E0024896F /* Main.storyboard */; };
 		D25F4F4D249919200024896F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25F4F4C249919200024896F /* Assets.xcassets */; };
 		D25F4F50249919200024896F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25F4F4E249919200024896F /* LaunchScreen.storyboard */; };
+		D25F4F75249925930024896F /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F4F74249925930024896F /* CalenderViewController.swift */; };
+		D25F4F79249952930024896F /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F4F78249952930024896F /* NewAssignmentViewController.swift */; };
+		D26A7D9C249C1133001239A4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A7D9B249C1133001239A4 /* TableViewController.swift */; };
+		D26A7DA1249D61D6001239A4 /* Classes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26A7D9F249D61D6001239A4 /* Classes.xcdatamodeld */; };
+		D26A7DA4249D62D9001239A4 /* Class+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A7DA2249D62D9001239A4 /* Class+CoreDataClass.swift */; };
+		D26A7DA5249D62D9001239A4 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A7DA3249D62D9001239A4 /* Class+CoreDataProperties.swift */; };
+		D26A7DA8249D65D3001239A4 /* ClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A7DA7249D65D3001239A4 /* ClassTableViewController.swift */; };
+		D26A7DAB249E797D001239A4 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A7DAA249E797D001239A4 /* AssignmentsTableViewController.swift */; };
+		D26A7DAF24A05F5A001239A4 /* AssignmentClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A7DAE24A05F5A001239A4 /* AssignmentClassTableViewController.swift */; };
+		D26A7DB124A16CE4001239A4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A7DB024A16CE4001239A4 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D25F4F3E2499191E0024896F /* Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25F4F412499191E0024896F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25F4F432499191E0024896F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D25F4F452499191E0024896F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D25F4F472499191E0024896F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D25F4F4A2499191E0024896F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D25F4F4C249919200024896F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D25F4F4F249919200024896F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D25F4F51249919200024896F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25F4F74249925930024896F /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		D25F4F78249952930024896F /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
+		D26A7D9B249C1133001239A4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D26A7DA0249D61D6001239A4 /* Classes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Classes.xcdatamodel; sourceTree = "<group>"; };
+		D26A7DA2249D62D9001239A4 /* Class+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D26A7DA3249D62D9001239A4 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D26A7DA7249D65D3001239A4 /* ClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewController.swift; sourceTree = "<group>"; };
+		D26A7DAA249E797D001239A4 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
+		D26A7DAE24A05F5A001239A4 /* AssignmentClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentClassTableViewController.swift; sourceTree = "<group>"; };
+		D26A7DB024A16CE4001239A4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +58,9 @@
 		D25F4F352499191E0024896F = {
 			isa = PBXGroup;
 			children = (
-				D25F4F402499191E0024896F /* Planner */,
+				D25F4F5924991E920024896F /* Images */,
 				D25F4F3F2499191E0024896F /* Products */,
+				D25F4F402499191E0024896F /* Planner */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +77,29 @@
 			children = (
 				D25F4F412499191E0024896F /* AppDelegate.swift */,
 				D25F4F432499191E0024896F /* SceneDelegate.swift */,
-				D25F4F452499191E0024896F /* FirstViewController.swift */,
-				D25F4F472499191E0024896F /* SecondViewController.swift */,
 				D25F4F492499191E0024896F /* Main.storyboard */,
 				D25F4F4C249919200024896F /* Assets.xcassets */,
 				D25F4F4E249919200024896F /* LaunchScreen.storyboard */,
 				D25F4F51249919200024896F /* Info.plist */,
+				D25F4F74249925930024896F /* CalenderViewController.swift */,
+				D25F4F78249952930024896F /* NewAssignmentViewController.swift */,
+				D26A7D9F249D61D6001239A4 /* Classes.xcdatamodeld */,
+				D26A7D9B249C1133001239A4 /* TableViewController.swift */,
+				D26A7DA7249D65D3001239A4 /* ClassTableViewController.swift */,
+				D26A7DA3249D62D9001239A4 /* Class+CoreDataProperties.swift */,
+				D26A7DA2249D62D9001239A4 /* Class+CoreDataClass.swift */,
+				D26A7DAA249E797D001239A4 /* AssignmentsTableViewController.swift */,
+				D26A7DAE24A05F5A001239A4 /* AssignmentClassTableViewController.swift */,
+				D26A7DB024A16CE4001239A4 /* SettingsViewController.swift */,
 			);
 			path = Planner;
+			sourceTree = "<group>";
+		};
+		D25F4F5924991E920024896F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +173,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D25F4F482499191E0024896F /* SecondViewController.swift in Sources */,
-				D25F4F462499191E0024896F /* FirstViewController.swift in Sources */,
+				D26A7DAF24A05F5A001239A4 /* AssignmentClassTableViewController.swift in Sources */,
+				D26A7DA5249D62D9001239A4 /* Class+CoreDataProperties.swift in Sources */,
+				D26A7D9C249C1133001239A4 /* TableViewController.swift in Sources */,
+				D26A7DA1249D61D6001239A4 /* Classes.xcdatamodeld in Sources */,
+				D25F4F79249952930024896F /* NewAssignmentViewController.swift in Sources */,
+				D26A7DA4249D62D9001239A4 /* Class+CoreDataClass.swift in Sources */,
+				D25F4F75249925930024896F /* CalenderViewController.swift in Sources */,
+				D26A7DA8249D65D3001239A4 /* ClassTableViewController.swift in Sources */,
 				D25F4F422499191E0024896F /* AppDelegate.swift in Sources */,
+				D26A7DAB249E797D001239A4 /* AssignmentsTableViewController.swift in Sources */,
 				D25F4F442499191E0024896F /* SceneDelegate.swift in Sources */,
+				D26A7DB124A16CE4001239A4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +380,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D26A7D9F249D61D6001239A4 /* Classes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D26A7DA0249D61D6001239A4 /* Classes.xcdatamodel */,
+			);
+			currentVersion = D26A7DA0249D61D6001239A4 /* Classes.xcdatamodel */;
+			path = Classes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D25F4F362499191E0024896F /* Project object */;
 }

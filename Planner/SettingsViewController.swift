@@ -3,69 +3,37 @@
 //  Planner
 //
 //  Created by Christina Chau on 6/22/20.
+//  ID: 112720104
 //  Copyright © 2020 Christina Chau. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
+protocol SettingsDelegate: class{
+    func passSettings(sort: String, order: String)
+}
+
 class SettingsViewController: UIViewController{
 
     private var sort = ["Class","Assignment","Date"]
     private var order = ["Ascending","Descending"]
     
-    private var sortStr: String?
-    private var orderStr: String?
+    var sortStr: String?
+    var orderStr: String?
     
+    weak var delegate: SettingsDelegate?
+    
+    @IBOutlet weak var orderLbl: UILabel!
+    @IBOutlet weak var sortLbl: UILabel!
     @IBOutlet weak var sortPicker: UIPickerView!
     @IBOutlet weak var orderPicker: UIPickerView!
     
-
+    
     @IBAction func saveChanges(_ sender: UIButton) {
-        sortAssignmentTable()
-        //sortClassesTable()
-    }
-    
-    func sortAssignmentTable(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedObjectContext = appDelegate.persistentContainer.viewContext
-        let managedContext = managedObjectContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Assignments")
-        var sortDescriptor: NSSortDescriptor
-        if sortStr == "Class"{
-            if orderStr == "Ascending"{
-                sortDescriptor = NSSortDescriptor(key: "classType", ascending: true)
-            }
-            else{
-                sortDescriptor = NSSortDescriptor(key: "classType", ascending: false)
-            }
-        }
-        else if sortStr == "Assignment"{
-            if orderStr == "Ascending"{
-                sortDescriptor = NSSortDescriptor(key: "assignmentTitle", ascending: true)
-            }
-            else{
-                sortDescriptor = NSSortDescriptor(key: "assignmentTitle", ascending: false)
-            }
-        }
-        else{
-            if orderStr == "Ascending"{
-                sortDescriptor = NSSortDescriptor(key: "dueDate", ascending: true)
-            }
-            else{
-                sortDescriptor = NSSortDescriptor(key: "dueDate", ascending: false)
-            }
-        }
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        do {
-            _ = try managedContext.fetch(fetchRequest)
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-    }
-    
-    func sortClassesTable(){
-        
+        sortStr = String(sortLbl.text!)
+        orderStr = String(orderLbl.text!)
+        self.delegate?.passSettings(sort: sortStr!, order: orderStr!)
     }
     
     override func viewDidLoad() {
@@ -94,10 +62,10 @@ extension SettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource{
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == sortPicker{
-            sortStr = sort[row]
+            sortLbl.text = sort[row]
         }
         else{
-            orderStr = order[row]
+            orderLbl.text = order[row]
 
         }
     }

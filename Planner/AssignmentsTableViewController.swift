@@ -3,6 +3,7 @@
 //  Planner
 //
 //  Created by Christina Chau on 6/20/20.
+//  ID: 112720104
 //  Copyright © 2020 Christina Chau. All rights reserved.
 //
 
@@ -10,19 +11,70 @@ import UIKit
 import CoreData
 import UserNotifications
 
-class AssignmentsTableViewController: UIViewController, NewAssignmenDelegate {
+class AssignmentsTableViewController: UIViewController, NewAssignmenDelegate, SettingsDelegate {
     
     private var assignTitle: String?
     private var desc: String?
     private var classes: String?
     private var dates: String?
+    private var sort: String?
+    private var order: String?
+    
+    var editObj: NSManagedObject?
+    var sortStr: String?
+    var orderStr: String?
     
     var assignment: [NSManagedObject] = []
     
     @IBOutlet var assignTableView: UITableView!
     
+    func passSettings(sort: String, order: String){
+        print(sort)
+        self.sort = sort
+        self.order = order
+        settings()
+    }
+    
+    func settings(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedObjectContext = appDelegate.persistentContainer.viewContext
+        let managedContext = managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Assignments")
+        var sortDescriptor: NSSortDescriptor
+        if sortStr == "Class"{
+            if orderStr == "Ascending"{
+                sortDescriptor = NSSortDescriptor(key: "classType", ascending: true)
+            }
+            else{
+                sortDescriptor = NSSortDescriptor(key: "classType", ascending: false)
+            }
+        }
+        else if sortStr == "Assignment"{
+            if orderStr == "Ascending"{
+                sortDescriptor = NSSortDescriptor(key: "assignmentTitle", ascending: true)
+            }
+            else{
+                sortDescriptor = NSSortDescriptor(key: "assignmentTitle", ascending: false)
+            }
+        }
+        else{
+            if orderStr == "Ascending"{
+                sortDescriptor = NSSortDescriptor(key: "dueDate", ascending: true)
+            }
+            else{
+                sortDescriptor = NSSortDescriptor(key: "dueDate", ascending: false)
+            }
+        }
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        do {
+            _ = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+         self.assignTableView.reloadData()
+    }
+    
     func passInfo(assignTitle: String, desc: String, classes: String, dates: String) {
-
         self.assignTitle = title
         self.desc = desc
         self.classes = classes
@@ -83,6 +135,11 @@ class AssignmentsTableViewController: UIViewController, NewAssignmenDelegate {
         if(segue.identifier == "segueNewAssignment"){
             let assignmentController = segue.destination as! NewAssignmentViewController
             assignmentController.delegate = self
+        }
+        
+        if(segue.identifier == "settingsSegue"){
+            let settingsController = segue.destination as! SettingsViewController
+            settingsController.delegate = self
         }
     }
     
@@ -194,5 +251,6 @@ extension AssignmentsTableViewController: UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath:IndexPath){
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
+    
 }

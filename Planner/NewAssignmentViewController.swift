@@ -3,6 +3,7 @@
 //  Planner
 //
 //  Created by Christina Chau on 6/16/20.
+//  ID: 112720104
 //  Copyright © 2020 Christina Chau. All rights reserved.
 //
 
@@ -14,7 +15,7 @@ protocol NewAssignmenDelegate: class{
 
 class NewAssignmentViewController: UIViewController{
     
-    private var tableView: TableViewController?
+    var tableView: TableViewController?
     weak var delegate: NewAssignmenDelegate?
     private var assignTitle: String?
     private var assignDesc: String?
